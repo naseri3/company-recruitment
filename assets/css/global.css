@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+    font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-width: 1320px;
+    margin: 0 auto;
+    overflow-x: auto;
+    box-sizing: border-box;
+    color: #212121;
+}
+body,
+button,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+table,
+td,
+textarea,
+th,
+ul {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+main {
+    background-color: #f9fafc;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+#headerWrap {
+    background-color: #f9fafc;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #d3d3d3 !important;
+}
+.site-footer {
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #d3d3d3 !important;
+}
+.footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    color: #333;
+    padding: 20px 0;
+    font-size: 14px;
+}
+.footer-info p {
+    margin: 2px 5px;
+    line-height: 1.8;
+}
+.footer-links {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 50px;
+    font-weight: 700;
+    font-size: 15px;
+}
+.footer-links a:first-child {
+    margin-left: 0;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Top Button */
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    color: #333;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transform: translateY(16px) scale(0.95);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        opacity 220ms ease,
+        transform 220ms ease;
+    z-index: 9999;
+}
+
+/* 보이는 상태 */
+.back-to-top.show {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 호버/포커스 스타일 */
+.back-to-top:focus,
+.back-to-top:hover {
+    outline: none;
+    box-shadow:
+        0 10px 26px rgba(0, 0, 0, 0.35),
+        0 0 0 4px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* SVG 아이콘 기본 */
+.back-to-top svg {
+    fill: currentColor;
+    width: 22px;
+    height: 22px;
+}
+
+/* 기본 네비 */
+.serviceNav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.serviceNav li {
+    position: relative;
+}
+
+.serviceNav a.navItem {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    display: block;
+}
+
+/* 즐겨찾기 */
+.favorite-star {
+    cursor: pointer;
+    font-size: 22px;
+    color: #aaa;
+    transition:
+        color 0.25s ease,
+        transform 0.2s ease;
+    user-select: none;
+}
+.favorite-star.active {
+    color: orange;
+    transform: scale(1.3);
+}
+.favorite-star:hover {
+    color: orange;
+}
+
+/* 마이페이지 즐겨찾기 버튼 */
+.myPage-favorite-star {
+    font-size: 25px !important;
+    cursor: pointer;
+    transition:
+        color 0.25s ease,
+        transform 0.2s ease;
+    user-select: none;
+}
+.myPage-favorite-star.active {
+    color: orange;
+    transform: scale(1.3);
+}
+.myPage-favorite-star:hover {
+    color: orange;
+}
+
+/* 로그인 */
+#login {
+    width: 50%;
+    height: 55vh;
+}
+#login .nav-tabs .nav-item .nav-link {
+    width: 307px;
+}
+.input-group .input-group-text {
+    background-color: #fff;
+}
+.input-group .input-group-text img {
+    width: 35px;
+}
+.input-group input[type="text"], input[type="password"] {
+    border-left: none;
+}
+.input-group input[type="text"]::placeholder, input[type="password"]::placeholder {
+    color: #aaa;
+    font-size: 1.1rem;
+} 
+#login .tab-content .tab-pane .btn-primary {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+.enterprise-find-your-pw {
+    font-size: 20px;
+    text-align: center;
+    color: #CC0000;
+}
+.social_login .login-btn {
+    width: 100%;
+    /* padding: 10px; */
+    border: none;
+    border-radius: 10px;
+    /* font-size: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+.social_login .google_login {
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+    background-color: #fff;
+    color:#B3B3B3;
+    padding: 7px 12px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social_login .google_login img {
+    width: 25px;
+    margin-right: 10px;
+}
