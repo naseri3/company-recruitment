@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>채용 정보 상세페이지 | 아파트잡</title>
+    <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon" />
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome CDN (v6.5.2) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoE8N6JY3m5z4R7Q0zj1T9juT7d4K5t1Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/subPage.css" />
+    <link rel="stylesheet" href="./assets/css/head.css" />
+    <link rel="stylesheet" href="./assets/css/print.css" />
+    <link rel="stylesheet" href="./assets/css/company-domain.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header id="headerWrap"></header>
+
+    <main>
+        <section id="subPage" class="job-detail container my-5 subRecruitDetail">
+            <h2 class="mb-3 fw-bold">채용정보</h2>
+
+            <!-- 채용 요약 정보 -->
+            <div class="mb-4 job-summary">
+                <h4 class="mb-1">청라한양수자인아파트</h4>
+                <h3 class="mb-4">인천_관리과장_경력
+                    <span class="endDate">2026-06-01 ~ 2026-12-31</span>
+                </h3>
+
+                <div class="row g-3 job-summary-group">
+                    <div class="col-md-4 col-sm-3 mt-0 job-summaryBox-requirement">
+                        <h6 class="fw-bold">지원조건</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li>직무 : 관리과장</li>
+                            <li>경력 : 경력1년 이상</li>
+                            <li>학력 : 고졸이상</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-4 mt-0 job-summaryBox-condition">
+                        <h6 class="fw-bold">근무조건</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li>급여 : 월급3,924,350 (세전)</li>
+                            <li>근무지역 : 인천광역시 서구 비즈니스로 41</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-3 mt-0 job-summaryBox-complex">
+                        <h6 class="fw-bold">단지정보</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li>아파트명 : 청라한양수자인아파트</li>
+                            <li>단지규모 : 566세대</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 목록보기, 지원하기, 즐겨찾기, 인쇄하기 버튼 -->
+            <div class="text-center mb-5">
+                <button class="btn btn-secondary px-5 me-2 job-action-list">목록보기</button>
+                <button class="btn btn-primary px-5 me-2 job-action-apply">지원하기</button>
+                <button class="btn btn-secondary px-5 me-2 job-action-favorite">★ 즐겨찾기</button>
+                <button class="btn btn-secondary px-5 job-action-print">인쇄하기</button>
+            </div>
+
+            <!-- 탭 -->
+            <ul class="nav nav-tabs" id="jobTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="detail-tab" data-bs-toggle="tab" data-bs-target="#detail"
+                        type="button" role="tab">모집요강</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="complex-tab" data-bs-toggle="tab" data-bs-target="#complex"
+                        type="button" role="tab">K-apt 단지정보</button>
+                </li>
+            </ul>
+
+            <div class="tab-content border border-top-0 p-4 bg-white rounded-bottom" id="jobTabContent">
+                <!-- 상세요강 -->
+                <div class="tab-pane fade show active" id="detail" role="tabpanel" aria-labelledby="detail-tab">
+                    <table class="table table-bordered align-middle job-detail__table">
+                        <tbody>
+                            <tr>
+                                <th>아파트명</th>
+                                <td>청라한양수자인아파트</td>
+                                <th>단지규모</th>
+                                <td>566세대</td>
+                            </tr>
+                            <tr>
+                                <th>근무지 주소</th>
+                                <td colspan="3">인천광역시 서구 비즈니스로 41</td>
+                            </tr>
+                            <tr>
+                                <th>모집직무</th>
+                                <td>관리과장</td>
+                                <th>모집인원</th>
+                                <td>1명</td>
+                            </tr>
+                            <tr>
+                                <th>급여</th>
+                                <td>월급 (3,924,350~3,924,350 )</td>
+                                <th>고용형태</th>
+                                <td>계약직</td>
+                            </tr>
+                            <tr>
+                                <th>경력</th>
+                                <td>경력1년 이상</td>
+                                <th>학력</th>
+                                <td>고졸이상</td>
+                            </tr>
+                            <tr>
+                                <th>관리형태</th>
+                                <td>위탁/쌍용개발</td>
+                                <th>근무방식</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>자격요건</th>
+                                <td colspan="3">전기산업기사</td>
+                            </tr>
+                            <tr>
+                                <th>우대사항</th>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <th>제출서류</th>
+                                <td colspan="3">이력서,자기소개서</td>
+                            </tr>
+                            <tr>
+                                <th>복리후생</th>
+                                <td colspan="3">하계휴가비,퇴직금,연차수당,명절보너스</td>
+                            </tr>
+                            <tr>
+                                <th>상세정보</th>
+                                <td colspan="3">
+                                    <p>
+                                        * 급여 : 3,924,350원(검침수당 별도)<br>
+                                        * 지원자격 : 수전용량 2,750Kw/ 발전용량 750Kw<br>
+                                        * 마감일자 : 2026년 6월 12일<br>
+                                        * 면접 예정자는 개별 연락 후 진행 예정<br>
+                                        [근무 예정일 : 2026년 6월 15일]-근무 예정일은 조정 가능<br>
+                                        * 서류접수</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 단지정보 -->
+                <div class="tab-pane fade" id="complex" role="tabpanel" aria-labelledby="complex-tab">
+                    <div class="job-complex__wrap">
+                        <!-- 상단 제목 -->
+                        <h6 class="complex-header-title">근무지정보 (K-APT 기준)</h6>
+                        <!-- (1) 기본정보 -->
+                        <table class="table table-bordered align-middle job-complex__table mb-4">
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="table-section-title w-50">(1) 기본 정보</th>
+                                    <th colspan="2" class="table-section-subtitle w-50 border-start-0">※ 본 정보는 K-APT
+                                        기반으로 제공되며, 실제와 다를 수 있습니다</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>기업명</th>
+                                    <td>청라한양수자인아파트</td>
+                                    <th>단지코드</th>
+                                    <td>A40471910</td>
+                                </tr>
+                                <tr>
+                                    <th>주소</th>
+                                    <td colspan="3">인천광역시 서구 비즈니스로 41</td>
+                                </tr>
+                                <tr>
+                                    <th>세대수</th>
+                                    <td>566</td>
+                                    <th>분양형태</th>
+                                    <td>분양</td>
+                                </tr>
+                                <tr>
+                                    <th>분양세대</th>
+                                    <td>566</td>
+                                    <th>임대세대</th>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>임대세대(공공)</th>
+                                    <td>0</td>
+                                    <th>임대세대(민간)</th>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>사용승인일</th>
+                                    <td>20111228</td>
+                                    <th>우편번호</th>
+                                    <td>22766</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- (2) 근무직원 -->
+                        <table class="table table-bordered align-middle job-complex__table mb-4">
+                            <thead>
+                                <tr>
+                                    <th colspan="4" class="table-section-title">(2) 근무직원</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>총인원</th>
+                                    <td colspan="3">18명</td>
+                                </tr>
+                                <tr>
+                                    <th>일반관리</th>
+                                    <td>7명</td>
+                                    <td>위탁사</td>
+                                    <td>(주)쌍용개발</td>
+                                </tr>
+                                <tr>
+                                    <th>경비관리</th>
+                                    <td>4명</td>
+                                    <td>위탁사</td>
+                                    <td>상일테크</td>
+                                </tr>
+                                <tr>
+                                    <th>청소관리</th>
+                                    <td>7명</td>
+                                    <td>위탁사</td>
+                                    <td>선우환경관리주식회사</td>
+                                </tr>
+                                <tr>
+                                    <th>연간소독횟수</th>
+                                    <td>12회/년</td>
+                                    <th>위탁관리</th>
+                                    <td>(주)씨앤</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- (3) 단지정보 -->
+                        <table class="table table-bordered align-middle job-complex__table">
+                            <thead>
+                                <tr>
+                                    <th colspan="4" class="table-section-title">(3) 단지정보</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>단지분류</th>
+                                    <td>아파트</td>
+                                    <th>동수</th>
+                                    <td>6동</td>
+                                </tr>
+                                <tr>
+                                    <th>난방방식</th>
+                                    <td>지역난방</td>
+                                    <th>음식물처리방법</th>
+                                    <td>거점장비수거방식</td>
+                                </tr>
+                                <tr>
+                                    <th>건물구조</th>
+                                    <td>철근콘크리트구조</td>
+                                    <th>전기-수전용량</th>
+                                    <td>35006</td>
+                                </tr>
+                                <tr>
+                                    <th>전기-세대전기계약방식</th>
+                                    <td>단일계약</td>
+                                    <th>전기안전관리자선임여부</th>
+                                    <td>상주선임</td>
+                                </tr>
+                                <tr>
+                                    <th>화재수신방식</th>
+                                    <td>R형</td>
+                                    <th>급수방식</th>
+                                    <td>부스타방식</td>
+                                </tr>
+                                <tr>
+                                    <th>승각기관리방식</th>
+                                    <td>부스타방식</td>
+                                    <th>층 승강기대수</th>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <th>총주차대수</th>
+                                    <td>1082</td>
+                                    <th>지상주차대수</th>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th>지하주차대수</th>
+                                    <td>1078</td>
+                                    <th>주차관제시스템</th>
+                                    <td>유</td>
+                                </tr>
+                                <tr>
+                                    <th>CCTV대수</th>
+                                    <td>139</td>
+                                    <th>홈네트워크</th>
+                                    <td>유</td>
+                                </tr>
+                                <tr>
+                                    <th>최고층수</th>
+                                    <td>30</td>
+                                    <th>지하층수</th>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>전기차전용주차면수(지상)</th>
+                                    <td>0</td>
+                                    <th>전기차전용주차면수(지하)</th>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <th>전기차충전시설대수(지상)</th>
+                                    <td>0</td>
+                                    <th>전기차충전시설대수(지하)</th>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>부대복지시설</th>
+                                    <td colspan="3">
+                                        관리사무소, 노인정, 보육시설, 문고, 주민공동시설, 어린이놀이터, 휴게시설, 유치원, 커뮤니티공간, 자전거보관소, 기타
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 추후 지도 삭제 -->
+            <div style="margin-top: 20px;">
+                <img src="/assets/img/apt_map.png" />
+            </div>
+
+            <!-- 지원하기, 즐겨찾기, 인쇄하기 버튼 -->
+            <div class="text-center mt-5">
+                <button class="btn btn-secondary px-5 me-2 job-action-list">목록보기</button>
+                <button class="btn btn-primary px-5 me-2 job-action-apply">지원하기</button>
+                <button class="btn btn-secondary px-5 me-2 job-action-favorite">★ 즐겨찾기</button>
+                <button class="btn btn-secondary px-5 job-action-print">인쇄하기</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="footerWrap" class="site-footer"></footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="맨 위로 이동" title="맨 위로" type="button">
+        <!-- 단순한 화살표 아이콘 (SVG) -->
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 4l-8 8h5v8h6v-8h5z"></path>
+        </svg>
+    </button>
+
+    <script src="./assets/js/jobFavorite.js" defer></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/company-common.js"></script>
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>

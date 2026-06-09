@@ -2,7 +2,6 @@
    1️⃣ JSON 데이터
 =============================== */
 const directorList = [
-    /*
   {
     id: 301,
     title: "관리소장 경력직 채용",
@@ -15,7 +14,7 @@ const directorList = [
     registerDate: "2026-06-08",
     deadline: "2026-12-31",
     isClosed: false
-  },
+  }, /*
   {
     id: 302,
     title: "아파트 관리소장 모집",
@@ -163,7 +162,7 @@ function renderDirectorCards(list) {
         const deadlineText = formatDate(item.deadline);
 
         const cardHTML = `
-            <a href="/job-detail.html?id=${item.id}" 
+            <a href="/detailPage.html?id=${item.id}" 
                class="director-card-link">
 
                 <div class="director-card subDirector-card">

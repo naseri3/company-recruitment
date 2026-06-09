@@ -126,7 +126,31 @@ section {
     background-color: #fff;
 }
 
+.subCompanyHomepage {
+    margin-top: 20px;
+    text-align: center;
+}
 
+.subCompanyHomepage-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    height: 60px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 8px;
+    background: #334155;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.subCompanyHomepage-btn:hover {
+    opacity: 0.9;
+}
 
 /* =========================
    🔹 FOOTER
@@ -134,17 +158,14 @@ section {
 .footer-info-panel {
     max-height: 0;
     overflow: hidden;
-
     margin-top: 0;
     font-size: 13px;
     color: #777;
     line-height: 1.7;
-
     transition:
         max-height 0.3s ease,
         margin-top 0.3s ease,
         opacity 0.3s ease;
-
     opacity: 0;
 }
 
@@ -155,9 +176,68 @@ section {
 }
 
 .footer-info-panel p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     list-style: 1.8;
 }
 .footer-arrow {
     font-size: 0.7rem;
+}
+
+/* 검색페이지 - default.html */
+.subJobListHeader-title {
+    margin-bottom: 10px;
+}
+.subSearchResult {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.subSearchResult-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4b5563;
+    white-space: nowrap;
+}
+
+.subSearchResult-keyword {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;  
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.subSearchResult-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    min-height: 35px;
+    padding: 0 18px;
+    background: #d9dee6;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+/* 상세페이지 */
+.subRecruitDetail {
+    margin-top: 180px !important;
+}
+.subRecruitDetail .job-summary {
+    border-top-color: #334155 !important;
+}
+.subRecruitDetail .nav-tabs .nav-link.active {
+    color: #334155 !important;
+    background-color: #fff !important;
+}
+.subRecruitDetail .nav-tabs .nav-link {
+    background-color: #334155 !important;
+    color: #fff;
+}
+.subRecruitDetail .job-action-apply {
+    background-color: #334155 !important;
 }

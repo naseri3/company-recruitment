@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위탁사 채용 정보 | 아파트잡</title>
+    <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon" />
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome CDN (v6.5.2) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoE8N6JY3m5z4R7Q0zj1T9juT7d4K5t1Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/subPage.css" />
+    <link rel="stylesheet" href="./assets/css/head.css" />
+    <link rel="stylesheet" href="./assets/css/company-domain.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header id="headerWrap"></header>
+
+    <main class="company-page container">
+        <!-- 기업 배너 -->
+        <section class="companyBanner">
+            <img src="/assets/img/ssyong_banner-2.png" alt="기업 배너" />
+        </section>
+
+        <!-- 전체 공고 -->
+        <section id="allRecruit" class="general mt-5">
+            <h2 class="subJobListHeader-title">전체공고</h2>
+            <div class="job-list-header">
+                <div class="subSearchResult">
+                    <span class="subSearchResult-label">검색 결과 :</span>
+                    <div class="subSearchResult-keyword">
+                        소장
+                    </div>
+                </div>
+                <div class="sort-box">
+                    <!-- 정렬 옵션 -->
+                    <select id="sortOrder">
+                        <option value="latest" selected>최신순</option>
+                        <option value="salary">급여순</option>
+                        <option value="deadline">마감임박순</option>
+                    </select>
+
+                    <!-- 페이지 개수 옵션 -->
+                    <select id="pageSize">
+                        <option value="20" selected>20개씩</option>
+                        <option value="30">30개씩</option>
+                        <option value="40">40개씩</option>
+                        <option value="50">50개씩</option>
+                    </select>
+                </div>
+            </div>
+            <table class="job-table subJob-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>공고제목</th>
+                        <th>근무지역</th>
+                        <th>직무</th>
+                        <th>급여</th>
+                        <th>단지명</th>
+                        <th>단지규모</th>
+                        <th>마감일</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody id="jobTableBody">
+                    <!-- JS로 데이터 렌더링 -->
+                </tbody>
+            </table>
+
+            <!-- 페이지네이션 -->
+            <nav class="subJob-pagination" aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">5</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">6</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">7</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">8</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">9</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">10</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer id="footerWrap" class="site-footer"></footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="맨 위로 이동" title="맨 위로" type="button">
+        <!-- 단순한 화살표 아이콘 (SVG) -->
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 4l-8 8h5v8h6v-8h5z"></path>
+        </svg>
+    </button>
+
+    <script src="./assets/js/jobList.js"></script>
+    <script src="./assets/js/subLogin.js"></script>
+    <script src="./assets/js/company-common.js"></script>
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>
