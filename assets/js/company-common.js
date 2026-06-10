@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 =============================== */
 async function loadHeader() {
     try {
-        const headerResponse = await fetch("./assets/components/header.html");
+        const headerResponse = await fetch("./assets/components/SubHeader.html");
         const headerHtml = await headerResponse.text();
 
         document.querySelector("#headerWrap").innerHTML = headerHtml;
@@ -35,7 +35,7 @@ async function loadHeader() {
 =============================== */
 async function loadFooter() {
     try {
-        const footerResponse = await fetch("./assets/components/footer.html");
+        const footerResponse = await fetch("./assets/components/SubFooter.html");
         const footerHtml = await footerResponse.text();
 
         document.querySelector("#footerWrap").innerHTML = footerHtml;

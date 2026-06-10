@@ -1,0 +1,55 @@
+<!-- #include virtual = "/inc/sessin_top.asp" -->
+<!-- #include virtual = "/inc/inc_dbCon.asp" -->
+<!-- #include virtual = "/inc/function.asp" -->
+<!-- #include virtual = "/inc/head.asp" -->
+
+
+<%
+
+
+query="select * from  job4you.dbo.Recruit where  R_SEQ='" & request("R_SEQ") &"' "&inc_recruit_paywc&" and  is_del is null"
+Set Rs=Con.Execute(query)
+
+
+query2="select * from  job4you.dbo.Company where  C_SEQ='" & Rs("R_user_id") &"'"
+Set Rs2=Con.Execute(query2)
+
+
+
+	address_info=get_Company_address(Rs2("address_seq"))
+
+
+%>
+
+
+<body class="sub">
+   <main class="contents">
+      <div class="wrap popup">
+
+         <!-- 지원 완료 section -->
+         <section class="announce-apply">
+
+            <!-- 지원 완료 안내 div -->
+            <div class="apply-info">
+               <div class="apply-info__logo">
+                  <h2 class="logo">
+                     <!-- <img src="/images/pc_logo.png" alt="<%=address_info(1)%>"> -->
+					 <img src="../images/ssyong.png" alt="기업로고" onerror="this.style.display='none'; this.src='/images/pc_logo.png'; this.style.display='block';">
+                  </h2>
+               </div>
+               <h2 class="apply-info__text">지원이 완료 되었습니다.</h2>
+               <div class="button__wrap">
+                  <!--<button type="button" class="btn_typeD d-navy mr30" onclick="popupMain()">메인으로</button>-->
+				  <button type="button" class="btn_typeD d-navy mr30" onclick="window.opener.location.reload(true);;self.close();">닫기</button>
+                  <button type="button" class="btn_typeD blue" onclick="popupStatus()">내 지원공고 현황</button>
+               </div>
+            </div>
+            <!-- 지원 완료 안내 div 끝 -->
+
+         </section>
+         <!-- 지원 완료 section 끝 -->
+
+      </div>
+
+   </main>
+</body>

@@ -1,0 +1,145 @@
+<!-- #include virtual = "/inc/sessin_top.asp" -->
+<!-- #include virtual = "/inc/inc_dbCon.asp" -->
+<!-- #include virtual = "/inc/function.asp" -->
+<!-- #include virtual = "/inc/renew_head.asp" -->
+<% 
+	url_go = request("url_go") 
+	check_type = request("check_type") 
+
+
+
+%>
+<script>
+<%If check_type = "2" Then%>
+	$(document).ready(function() {
+		$("#login_type_btn_2").trigger("click");
+
+	});
+<%End if%>
+
+	function login_check(form) {
+		if (!form.M_user_id.value) {
+			alert("아이디를 입력하세요!");
+			return false;
+		}
+
+		if (!form.M_user_id.value) {
+			alert("비밀번호를 입력하세요!");
+			return false;
+		}
+
+		form.submit();
+	}
+
+	function login_type(val){
+		$("#login_type").val(val);
+		$('#login_signin_1').show();
+		$('#login_signin_2').hide();
+
+		if (val == "1")
+		{
+			$('#login_signin_12').show();
+			$('#login_signin_2').hide();
+		}
+		if (val == "2")
+		{
+			$('#login_signin_1').hide();
+			$('#login_signin_2').show();
+		}
+		
+	}
+
+	function fnPopSNSLogin(sns) {
+		var win = window.open("/subpage/gatepage.asp?sns="+sns, "_blank", "top=0,left=0,width=400,height=400");
+		return;
+	}
+
+</script>
+
+ <body>
+	<!-- header -->
+	<header id="headerWrap">
+		<!-- #include virtual = "/inc/renew_header.asp" -->
+	</header>
+
+	<main id="subPage">
+
+
+         <!-- 로그인 section -->
+         <section class="login">
+            <div class="section__inner mw1150">
+               <h2 class="blind">로그인</h2>
+               <div class="login_area">
+                  <div class="login-area__logo">
+                     <div class="logo">
+                        <a href="/index.html" class="logo__link">
+                           <img src="../images/ssyong.png" alt="기업로고">
+                        </a>
+                     </div>
+                  </div>
+
+                  <form method='POST' action='process_action.asp' onsubmit='return login_check(this)' target='_fra'>
+                     <input type='hidden' name='process_action' value='login_imsi'>
+					 <input type='hidden' name='login_type'  id='login_type' <%If check_type = "2" Then%>value="2"<%else%>value="1"<%End if%>>
+					 <input type="hidden" name="url_go" id="url_go" value="<%=url_go%>">
+
+                     
+
+                     <div class="login-area__input">
+                        <div class="row--input">
+                           <input type="text" class="input--w300" placeholder="아이디" required name='M_user_id'>
+
+                           <!-- 유효성 검사 안내 문구 -->
+                           <p class="error-text error-id">필수 정보 입니다.</p>
+                        </div>
+                        <div class="row--input">
+                           <input type="password" class="input--w300" placeholder="비밀번호" required name='M_password'>
+
+                           <!-- 유효성 검사 안내 문구 -->
+                           <p class="error-text">비밀번호가 일치하지 않습니다.</p>
+                        </div>
+                     </div>
+
+                     <div class="login-area__btn">
+                        <div class="button__wrap">
+                           <button type="submit" class="btn_typeC skyblue">로그인</button>
+                        </div>
+                        <p class="button__wrap link__wrap"><a href="/subpage/find_id.html">아이디 찾기</a><span class="line"></span><a href="/subpage/find_pw.html">비밀번호 찾기</a>
+						<span class="line"></span><a href="/subpage/sign-in_type.html" class="login-signin__link">회원가입</a></p>
+                     </div>
+                  </form>
+               </div>
+              
+			 
+
+
+			  <!--div class="login-sns__area tab-contents on" data-tabIndex="0">
+                  <p class="login-sns__text">소셜 계정으로 간편 로그인하기</p>
+                  <div class="login-sns__link">
+                      <a href="javascript:;" onClick='fnPopSNSLogin("naver")'><img src="../images/sns-login-naver.png" alt=""></a>
+                       <!--<a href="#"  onClick='fnPopSNSLogin("kakao")'><img src="../images/sns-login-kakao.png" alt=""></a>-->
+                  </div-->
+               </div-->
+
+               <!-- <div class="login-signin__text">
+                  <p>아직도 회원이 아닌가요? <span class="enter"></span>회원가입하시고 다양한 혜택을 누리세요! <a href="/subpage/sign-in_type.html"
+                        class="login-signin__link">회원가입</a></p>
+               </div> -->
+            </div>
+         </section>
+         <!-- 로그인 section 끝 -->
+      </main>
+
+	<!-- /inc/float_menu.html 에서 불러옴 -->
+	<aside class="float-menu"><!-- #include virtual = "/inc/float_menu.asp" --></aside>
+	<!-- /inc/footer.html 에서 불러옴 -->
+	<footer id="footer">
+	<!-- #include virtual = "/inc/renew_footer.asp" -->
+	</footer>
+
+
+</body>
+
+<iframe name="_fra" width="800" height="300" style="display:none;"></iframe>
+
+</html>
