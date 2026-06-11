@@ -1,0 +1,67 @@
+[
+  {
+    "id": 301,
+    "title": "관리소장 경력직 채용",
+    "area": "서울 > 서초구",
+    "position": "시설관리",
+    "salary": "월급 420만원(세전)",
+    "complexName": "래미안 서초 에스티지",
+    "experience": "경력 5년 이상",
+    "complexSize": 820,
+    "registerDate": "2026-06-08",
+    "deadline": "2026-12-31",
+    "isClosed": false
+  },
+  {
+    "id": 302,
+    "title": "아파트 관리소장 모집",
+    "area": "경기 > 성남시 분당구",
+    "position": "기전과장",
+    "salary": "월급 480만원(세전)",
+    "complexName": "힐스테이트 판교",
+    "experience": "경력 무관",
+    "complexSize": 980,
+    "registerDate": "2026-06-07",
+    "deadline": "2026-12-31",
+    "isClosed": true
+  },
+  {
+    "id": 303,
+    "title": "주택관리사(보) 소장 채용",
+    "area": "경기 > 수원시 영통구",
+    "position": "전기기사",
+    "salary": "월급 390만원(세전)",
+    "complexName": "광교 자이",
+    "experience": "경력 3년 이상",
+    "complexSize": 740,
+    "registerDate": "2026-06-06",
+    "deadline": "2026-12-31",
+    "isClosed": true
+  },
+  {
+    "id": 304,
+    "title": "공동주택 관리소장 모집",
+    "area": "서울 > 마포구",
+    "position": "관리과장",
+    "salary": "월급 410만원(세전)",
+    "complexName": "마포 래미안 푸르지오",
+    "experience": "경력 무관",
+    "complexSize": 690,
+    "registerDate": "2026-06-05",
+    "deadline": "2026-12-31",
+    "isClosed": true
+  },
+  {
+    "id": 305,
+    "title": "아파트 소장 채용",
+    "area": "경기 > 화성시",
+    "position": "시설과장",
+    "salary": "월급 395만원(세전)",
+    "complexName": "동탄 센트럴자이",
+    "experience": "경력 무관",
+    "complexSize": 950,
+    "registerDate": "2026-06-04",
+    "deadline": "2026-12-31",
+    "isClosed": true
+  }
+]
