@@ -21,8 +21,10 @@ async function loadHeader() {
 
         console.log("Header Load Success");
 
-        setSubdomainLoginState(true);
-        // setSubdomainLoginState(false);
+        // TODO: ASP 로그인 세션 값 연동 필요
+        
+        // setSubdomainLoginState(true);
+        setSubdomainLoginState(false);
 
     } catch (error) {
         console.error("Header Load Error", error);

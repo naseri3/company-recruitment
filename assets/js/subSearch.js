@@ -16,8 +16,12 @@ function initSubSearch() {
             return;
         }
 
-        location.href =
-            `default.html?keyword=${encodeURIComponent(keyword)}`;
+        if (keyword.length > 50) {
+            alert("검색어는 최대 50자까지 입력 가능합니다.");
+            return;
+        }
+
+        location.href = `default.html?keyword=${encodeURIComponent(keyword)}`;
     });
 }
 
@@ -25,35 +29,19 @@ function initSubSearch() {
    Search Result Keyword
 =============================== */
 function initSearchResultKeyword() {
-    const keywordBox =
-        document.querySelector(".subSearchResult-keyword");
+    const keywordBox = document.querySelector(".subSearchResult-keyword");
 
     if (!keywordBox) return;
 
-    const params =
-        new URLSearchParams(window.location.search);
-
-    const keyword =
-        params.get("keyword");
+    const params = new URLSearchParams(window.location.search);
+    const keyword = params.get("keyword");
 
     if (!keyword) {
-        keywordBox.innerHTML =
-            '<span class="subSearchResult-tag">전체</span>';
+        keywordBox.innerHTML = `<span class="subSearchResult-tag">전체</span>`;
         return;
     }
 
-    const keywords = keyword
-        .trim()
-        .split(/\s+/);
-
-    keywordBox.innerHTML = keywords
-        .map(item =>
-            `<span class="subSearchResult-tag">${item}</span>`
-        )
-        .join("");
+    keywordBox.innerHTML = `
+        <span class="subSearchResult-tag">${keyword}</span>
+    `;
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    initSubSearch();
-    initSearchResultKeyword();
-});
