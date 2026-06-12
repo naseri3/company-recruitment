@@ -222,6 +222,11 @@ section {
     font-weight: 600;
     color: #4b5563;
 }
+.subFooter-service-text {
+    float: right;
+    font-size: 14px;
+    color: #777;
+}
 
 /* 상세페이지 */
 .subRecruitDetail {
@@ -240,4 +245,20 @@ section {
 }
 .subRecruitDetail .job-action-apply {
     background-color: #334155 !important;
+}
+
+/* 서브 도매인 로그인 */
+.subCompany-logo {
+    height: 73px;
+}
+.subLogin-notice {
+    font-size: 15px;
+    text-align: center;
+    color: #777;
+    margin-top: 30px;
+}
+.subLogin-company-name {
+    font-size: 16px;
+    color: #2d3748;
+    font-weight: 700;
 }

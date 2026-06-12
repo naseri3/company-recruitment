@@ -56,6 +56,9 @@
 
 </script>
 
+<link rel="stylesheet" href="/assets/css/company-domain.css">
+
+
  <body>
 	<!-- header -->
 	<header id="headerWrap">
@@ -73,7 +76,7 @@
                   <div class="login-area__logo">
                      <div class="logo">
                         <a href="/index.html" class="logo__link">
-                           <img src="../images/ssyong.png" alt="기업로고">
+                           <img src="../images/ssyong.png" alt="기업로고" class="subCompany-logo">
                         </a>
                      </div>
                   </div>
@@ -110,7 +113,9 @@
                   </form>
                </div>
               
-			 
+			   <!-- 로그인 설명 안내 -->
+				<div id="loginNotice" class="subLogin-notice"></div>
+
 
 
 			  <!--div class="login-sns__area tab-contents on" data-tabIndex="0">
@@ -141,5 +146,22 @@
 </body>
 
 <iframe name="_fra" width="800" height="300" style="display:none;"></iframe>
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const companyName = "쌍용건설";
+
+		const notice = document.getElementById("loginNotice");
+
+		if (notice) {
+			notice.innerHTML = `
+				<span class="subLogin-company-name">${companyName}</span> 인재 채용관은 ㈜이테시스의 아파트잡에서 제공합니다.<br>
+				이테시스(아파트잡) 회원의 경우<br>
+				이테시스(아파트잡) 계정 정보로 로그인이 가능합니다.
+			`;
+		}
+	});
+</script>
 
 </html>
